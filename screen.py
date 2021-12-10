@@ -1,5 +1,3 @@
-import os
-
 import cv2
 import pytesseract
 from mss import mss
@@ -53,4 +51,4 @@ class ScreenCapture:
         cropped = ScreenCapture.crop_image(screen_shot)
         text = ScreenCapture.read_text_from_image(cropped)
         if text != "":
-            self.to_do.add_task(text, os.getenv('TODO_LIST_ID'))
+            self.to_do.add_task(text)
