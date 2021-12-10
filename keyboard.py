@@ -1,14 +1,14 @@
-from pynput.keyboard import Key, KeyCode
+from pynput.keyboard import Key
 
 from screen import ScreenCapture
 
 
 class KeyboardListener:
-    def __init__(self):
+    def __init__(self, screen_capture: ScreenCapture):
         # The currently pressed keys (initially empty)
         self.pressed_vks = set()
         self.combination_to_function = {
-            frozenset([Key.ctrl_l, Key.shift]): ScreenCapture.make_screen_shot,  # shift + a
+            frozenset([Key.ctrl_l, Key.shift]): screen_capture.capture_screen,  # shift + a
         }
 
     def get_vk(self, key):
