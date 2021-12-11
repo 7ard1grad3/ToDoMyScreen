@@ -14,5 +14,6 @@ if __name__ == '__main__':
     # Init global path for pytesseract
     pytesseract.tesseract_cmd = PYTESSERACT_PATH
     keyboardListener = KeyboardListener(ScreenCapture(tasks))
-    with Listener(on_press=keyboardListener.on_press, on_release=keyboardListener.on_release) as listener:
-        listener.join()
+    while True:
+        with Listener(on_press=keyboardListener.on_press, on_release=keyboardListener.on_release) as listener:
+            listener.join()

@@ -1,0 +1,7 @@
+python-dotenv~=0.19.2
+pynput~=1.7.5
+pytesseract~=0.3.8
+requests~=2.26.0
+opencv-python~=4.5.4.60
+mss~=6.1.0
+win10toast~=0.9

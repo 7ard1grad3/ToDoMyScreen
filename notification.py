@@ -9,7 +9,8 @@ class Notification:
     def send_notification(message, exit=False, duration=5):
         if platform == "win32":
             ToastNotifier().show_toast("Shed ToDo", message, duration=duration,
-                                       icon_path="app.ico")
+                                       icon_path="app.ico",
+                                       threaded=True)
         elif platform == "linux" or platform == "linux2":
             if not exit:
                 print(message)
